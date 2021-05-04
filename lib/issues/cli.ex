@@ -36,7 +36,7 @@ defmodule Issues.CLI do
   end
 
   def process({user, project, _count}) do
-    Issues.GitHubIssues.fetch(user, project)
+    Issues.GithubIssues.fetch(user, project)
   end
 
   defp args_to_internal_representation([user, project, count]) do
