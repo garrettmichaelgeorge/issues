@@ -28,6 +28,11 @@ defmodule Issues.CLI do
     |> args_to_internal_representation()
   end
 
+  @doc """
+  If `-h` is passed, print a usage statement to stdio and exit.
+
+  Otherwise, fetch GitHub issues
+  """
   def process(:help) do
     IO.puts """
     usage:  issues <user> <project> [ count | #{@default_count} ]
